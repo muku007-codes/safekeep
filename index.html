@@ -1,0 +1,1207 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SafeKeep: Private notes that never leave your phone.</title><meta name="description" content="SafeKeep is a private, offline notes app for Android. Notes, checklists and reminders, encrypted on your device. No account, no cloud, no tracking."><meta name="theme-color" content="#00B386"><meta property="og:title" content="SafeKeep: Private notes that never leave your phone."><meta property="og:description" content="SafeKeep is a private, offline notes app for Android. Notes, checklists and reminders, encrypted on your device. No account, no cloud, no tracking."><meta property="og:type" content="website"><link rel="icon" type="image/svg+xml" href="/safekeep/favicon.svg"><script>
+      // Set the theme before first paint so the page never flashes.
+      document.documentElement.classList.add('js');
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script><link rel="stylesheet" href="/safekeep/_astro/Base.B7JaI3tx.css"><style>.phone{--phone-w:300px;width:var(--phone-w);aspect-ratio:1080/2400;border-radius:calc(var(--phone-w) * .14);padding:calc(var(--phone-w) * .03);background:linear-gradient(145deg,#2b2f38,#0c0e12 55%,#23262e);flex:none;position:relative;box-shadow:0 0 0 1.5px #3a3f4a,0 40px 80px -30px #0a14128c,0 18px 36px -18px #00b38659}.phone-screen{border-radius:calc(var(--phone-w) * .11);background:#fff;width:100%;height:100%;position:relative;overflow:hidden}.phone-screen img{object-fit:cover;object-position:top;width:100%;height:100%}.statusbar{height:5.6%;font-size:calc(var(--phone-w) * .043);letter-spacing:.01em;color:#14171f;pointer-events:none;justify-content:space-between;align-items:center;padding:0 7.5% 0 7%;font-weight:700;display:flex;position:absolute;inset:0 0 auto}.statusbar.light{color:#f3f6f5}.statusbar svg{height:calc(var(--phone-w) * .038);width:auto}.phone:after{content:"";top:calc(var(--phone-w) * .055);width:calc(var(--phone-w) * .045);height:calc(var(--phone-w) * .045);background:#0b0d10;border-radius:50%;position:absolute;left:50%;transform:translate(-50%);box-shadow:inset 0 0 0 2px #1d2027}
+</style><link rel="stylesheet" href="/safekeep/_astro/index.DJJuxz4O.css"></head><body><div class="progress" aria-hidden="true"></div><header class="site-header"><div class="wrap bar"><a class="brand" href="/safekeep/" aria-label="SafeKeep home"><span class="brand-logo"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect x="4" y="4" width="112" height="112" rx="34" fill="#00B386"/><g transform="translate(60 60) scale(1) translate(-61 -60)">
+  <circle cx="36" cy="44" r="6.5" fill="#FFFFFF"/><circle cx="36" cy="58" r="6.5" fill="#FFFFFF"/><circle cx="36" cy="72" r="6.5" fill="#FFFFFF"/>
+  <path d="M44 28 H78 a8 8 0 0 1 8 8 V70 L64 92 H44 a8 8 0 0 1 -8 -8 V36 a8 8 0 0 1 8 -8 Z" fill="#FFFFFF"/>
+  <path d="M86 70 L64 92 C64 84 66 78 71 75 C75 72 80 70 86 70 Z" fill="#00805F"/>
+  <path d="M86 70 L64 92" stroke="#006B50" stroke-width="1.2"/>
+  <circle cx="61" cy="55" r="6" fill="#00B386"/>
+  <path d="M57.6 58.5 H64.4 L66.5 72 H55.5 Z" fill="#00B386"/></g></svg></span><span>SafeKeep</span></a><nav class="nav" id="nav" aria-label="Main"><a href="/safekeep/#features">Features</a><a href="/safekeep/security">Security</a><a href="/safekeep/faq">FAQ</a><a class="btn small nav-cta" href="/safekeep/download"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 15V3" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+  <path d="m7 10 5 5 5-5" />
+</svg> Download</a></nav><div class="bar-actions"><button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch between light and dark"><span class="sun"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg></span><span class="moon"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg></span></button><button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span class="open"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 5h16" />
+  <path d="M4 12h16" />
+  <path d="M4 19h16" />
+</svg></span><span class="close"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 6 6 18" />
+  <path d="m6 6 12 12" />
+</svg></span></button></div></div></header><main><section class="hero"><div class="aurora"><i></i><i></i><i></i></div><div class="grid-lines" aria-hidden="true"></div><div class="wrap hero-grid"><div class="hero-copy"><span class="eyebrow hero-in" style="--d:0"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg> Private by design</span><h1><span class="word" style="--w:0"><span>Your</span></span><span class="word" style="--w:1"><span>notes.</span></span><span class="word" style="--w:2"><span>Your</span></span><span class="word" style="--w:3"><span>phone.</span></span><span class="word" style="--w:4"><span class="grad">Nobody</span></span><span class="word" style="--w:5"><span class="grad">else.</span></span></h1><p class="lead hero-in" style="--d:1">SafeKeep is a notes app for Android that keeps everything encrypted on your device. No account, no cloud, no tracking. Just your notes, behind your lock.</p><div class="hero-cta hero-in" style="--d:2"><a class="btn" href="/safekeep/download"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 15V3" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+  <path d="m7 10 5 5 5-5" />
+</svg> Download for Android</a><a class="btn ghost" href="/safekeep/security">How it protects you <svg aria-hidden="true" class="nudge"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg></a></div><ul class="hero-points hero-in" style="--d:3"><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> No sign-up</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> No ads</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Android 7.0 and newer</li></ul></div><div class="hero-stage" id="hero-stage"><div class="halo" aria-hidden="true"></div><div class="ring ring-1" aria-hidden="true"></div><div class="ring ring-2" aria-hidden="true"></div><div class="tilt"><div class="phone hero-phone"><div class="phone-screen"><img src="/safekeep/_astro/home.CwU2_iED_1n7a46.webp" alt="SafeKeep home screen with colourful notes and checklists" loading="eager" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></div><div class="chip-float f1" data-depth="26" aria-hidden="true"><span class="chip-icon"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+</svg></span><span><b>Encrypted</b><small>AES-256, on device</small></span></div><div class="note-float f2" data-depth="-34" style="--c:#FFF8B8" aria-hidden="true"><b>Groceries</b><span class="tick done">Milk</span><span class="tick">Tomatoes</span></div><div class="note-float f3" data-depth="40" style="--c:#E2D8FF" aria-hidden="true"><b>Pay rent</b><span class="pill"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+  <path d="M22 8c0-2.3-.8-4.3-2-6" />
+  <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+  <path d="M4 2C2.8 3.7 2 5.7 2 8" />
+</svg> 1st, 9:00 AM</span></div><div class="chip-float f4" data-depth="-22" aria-hidden="true"><span class="chip-icon"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 20h.01" />
+  <path d="M8.5 16.429a5 5 0 0 1 7 0" />
+  <path d="M5 12.859a10 10 0 0 1 5.17-2.69" />
+  <path d="M19 12.859a10 10 0 0 0-2.007-1.523" />
+  <path d="M2 8.82a15 15 0 0 1 4.177-2.643" />
+  <path d="M22 8.82a15 15 0 0 0-11.288-3.764" />
+  <path d="m2 2 20 20" />
+</svg></span><span><b>Offline</b><small>no internet permission</small></span></div></div></div><a class="scroll-cue" href="#features" aria-label="Scroll to features"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></a></section><div class="marquee" aria-hidden="true"><div class="marquee-track"><div class="marquee-set"><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <circle cx="9" cy="7" r="4" />
+  <line x1="17" x2="22" y1="8" y2="13" />
+  <line x1="22" x2="17" y1="8" y2="13" />
+</svg> No account</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10.94 5.274A7 7 0 0 1 15.71 10h1.79a4.5 4.5 0 0 1 4.222 6.057" />
+  <path d="M18.796 18.81A4.5 4.5 0 0 1 17.5 19H9A7 7 0 0 1 5.79 5.78" />
+  <path d="m2 2 20 20" />
+</svg> No cloud</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+  <circle cx="12" cy="12" r="1" />
+  <path d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0" />
+</svg> No tracking</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M4.929 4.929 19.07 19.071" />
+</svg> No ads</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+</svg> AES-256 encryption</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 20h.01" />
+  <path d="M8.5 16.429a5 5 0 0 1 7 0" />
+  <path d="M5 12.859a10 10 0 0 1 5.17-2.69" />
+  <path d="M19 12.859a10 10 0 0 0-2.007-1.523" />
+  <path d="M2 8.82a15 15 0 0 1 4.177-2.643" />
+  <path d="M22 8.82a15 15 0 0 0-11.288-3.764" />
+  <path d="m2 2 20 20" />
+</svg> Works fully offline</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" />
+  <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" />
+</svg> Optional PIN lock</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="7" height="7" x="3" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="14" rx="1" />
+  <rect width="7" height="7" x="3" y="14" rx="1" />
+</svg> Home-screen widgets</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <ellipse cx="12" cy="5" rx="9" ry="3" />
+  <path d="M3 12a9 3 0 0 0 5 2.69" />
+  <path d="M21 9.3V5" />
+  <path d="M3 5v14a9 3 0 0 0 6.47 2.88" />
+  <path d="M12 12v4h4" />
+  <path d="M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16" />
+</svg> Encrypted backups</span></div><div class="marquee-set"><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <circle cx="9" cy="7" r="4" />
+  <line x1="17" x2="22" y1="8" y2="13" />
+  <line x1="22" x2="17" y1="8" y2="13" />
+</svg> No account</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10.94 5.274A7 7 0 0 1 15.71 10h1.79a4.5 4.5 0 0 1 4.222 6.057" />
+  <path d="M18.796 18.81A4.5 4.5 0 0 1 17.5 19H9A7 7 0 0 1 5.79 5.78" />
+  <path d="m2 2 20 20" />
+</svg> No cloud</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+  <circle cx="12" cy="12" r="1" />
+  <path d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0" />
+</svg> No tracking</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M4.929 4.929 19.07 19.071" />
+</svg> No ads</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+</svg> AES-256 encryption</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 20h.01" />
+  <path d="M8.5 16.429a5 5 0 0 1 7 0" />
+  <path d="M5 12.859a10 10 0 0 1 5.17-2.69" />
+  <path d="M19 12.859a10 10 0 0 0-2.007-1.523" />
+  <path d="M2 8.82a15 15 0 0 1 4.177-2.643" />
+  <path d="M22 8.82a15 15 0 0 0-11.288-3.764" />
+  <path d="m2 2 20 20" />
+</svg> Works fully offline</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" />
+  <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" />
+</svg> Optional PIN lock</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="7" height="7" x="3" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="14" rx="1" />
+  <rect width="7" height="7" x="3" y="14" rx="1" />
+</svg> Home-screen widgets</span><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <ellipse cx="12" cy="5" rx="9" ry="3" />
+  <path d="M3 12a9 3 0 0 0 5 2.69" />
+  <path d="M21 9.3V5" />
+  <path d="M3 5v14a9 3 0 0 0 6.47 2.88" />
+  <path d="M12 12v4h4" />
+  <path d="M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16" />
+</svg> Encrypted backups</span></div></div></div><section class="section" id="features"><div class="wrap"><div class="section-head"><span class="eyebrow" data-reveal><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+  <path d="M12 18h.01" />
+</svg> Everything you expect</span><h2 data-reveal style="--i:1">A full notes app. <span class="grad">Minus the cloud.</span></h2><p class="lead" data-reveal style="--i:2">SafeKeep does what the big notes apps do. It just does all of it on your phone.</p></div><div class="showcase"><div class="steps"><article class="step" data-step="0"><div class="step-body"><span class="step-num">01</span><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 4v16" />
+  <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" />
+  <path d="M9 20h6" />
+</svg></div><h3>Write it your way</h3><p>Headings, bold, italic and underline, in notes and in checklists, with undo and redo. Notes look the way you think, not like a plain text file.</p><ul><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Two heading sizes</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Bold, italic, underline</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> In notes and lists</li></ul></div><div class="phone step-phone"><div class="phone-screen"><img src="/safekeep/_astro/format.C5hddNml_Z1avLcX.webp" alt="A note with headings, bold and italic text, and the formatting bar open" loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></article><article class="step" data-step="1"><div class="step-body"><span class="step-num">02</span><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M13 5h8" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="m3 17 2 2 4-4" />
+  <path d="m3 7 2 2 4-4" />
+</svg></div><h3>Lists that keep up</h3><p>Turn any note into a checklist. Drag items into order, tick them off and watch them tuck away at the bottom.</p><ul><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Drag to reorder</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Ticked items collapse</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Tick from your home screen</li></ul></div><div class="phone step-phone"><div class="phone-screen"><img src="/safekeep/_astro/checklist.Dy5-coRD_Z1flzJC.webp" alt="A checklist note for a trip with ticked and unticked items" loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></article><article class="step" data-step="2"><div class="step-body"><span class="step-num">03</span><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="7" height="7" x="3" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="14" rx="1" />
+  <rect width="7" height="7" x="3" y="14" rx="1" />
+</svg></div><h3>Right on your home screen</h3><p>A quick note square starts a note, a list or a search in one tap. Pin a list next to it and tick items off without opening the app.</p><ul><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Quick note square</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Tick items on the widget</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Resizable note widget</li></ul></div><div class="phone step-phone"><div class="phone-screen"><img src="/safekeep/_astro/widgets.CY6CYy9l_Z1Js78M.webp" alt="An Android home screen with the SafeKeep quick note square and a grocery list widget" loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></article><article class="step" data-step="3"><div class="step-body"><span class="step-num">04</span><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+</svg></div><h3>Organise at a glance</h3><p>Twenty colours, labels, pins and an archive. Drag notes into your own order, and search by text, label or colour.</p><ul><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> 20 note colours</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Labels, pin and archive</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Search with filters</li></ul></div><div class="phone step-phone"><div class="phone-screen"><img src="/safekeep/_astro/colours.OimNwUEh_Z1y8U2m.webp" alt="The colour picker showing twenty note colours" loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></article><article class="step" data-step="4"><div class="step-body"><span class="step-num">05</span><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+  <path d="M22 8c0-2.3-.8-4.3-2-6" />
+  <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+  <path d="M4 2C2.8 3.7 2 5.7 2 8" />
+</svg></div><h3>Reminders, on the minute</h3><p>Once, daily, weekly, monthly or yearly. The notification shows only the title and stays hidden on the lock screen.</p><ul><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Repeating reminders</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Fires at the exact time</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Private on the lock screen</li></ul></div><div class="phone step-phone"><div class="phone-screen"><img src="/safekeep/_astro/reminder.DCy2nXce_4F4KT.webp" alt="The reminder sheet with date, time and repeat options" loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></article><article class="step" data-step="5"><div class="step-body"><span class="step-num">06</span><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+</svg></div><h3>A lock when you want one</h3><p>SafeKeep opens straight to your notes. Turn on a six digit PIN in Settings and it locks itself in the background. Screenshots are blocked either way.</p><ul><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Optional PIN</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Auto-lock</li><li><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 6 9 17l-5-5" />
+</svg> Screenshots blocked</li></ul></div><div class="phone step-phone"><div class="phone-screen"><img src="/safekeep/_astro/lock.DBZ245YR_ZLi7Fe.webp" alt="The lock screen asking for a six digit PIN" loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></article></div><div class="stage"><div class="stage-inner"><div class="stage-glow" aria-hidden="true"></div><div class="stage-phone"><div class="stage-shot active" data-shot="0"><div class="phone"><div class="phone-screen"><img src="/safekeep/_astro/format.C5hddNml_Z1avLcX.webp" alt loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></div><div class="stage-shot" data-shot="1"><div class="phone"><div class="phone-screen"><img src="/safekeep/_astro/checklist.Dy5-coRD_Z1flzJC.webp" alt loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></div><div class="stage-shot" data-shot="2"><div class="phone"><div class="phone-screen"><img src="/safekeep/_astro/widgets.CY6CYy9l_Z1Js78M.webp" alt loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></div><div class="stage-shot" data-shot="3"><div class="phone"><div class="phone-screen"><img src="/safekeep/_astro/colours.OimNwUEh_Z1y8U2m.webp" alt loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></div><div class="stage-shot" data-shot="4"><div class="phone"><div class="phone-screen"><img src="/safekeep/_astro/reminder.DCy2nXce_4F4KT.webp" alt loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></div><div class="stage-shot" data-shot="5"><div class="phone"><div class="phone-screen"><img src="/safekeep/_astro/lock.DBZ245YR_ZLi7Fe.webp" alt loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></div></div><div class="stage-dots" aria-hidden="true"><i class="active" data-dot="0"></i><i data-dot="1"></i><i data-dot="2"></i><i data-dot="3"></i><i data-dot="4"></i><i data-dot="5"></i></div></div></div></div></div></section><section class="section alt"><div class="wrap"><div class="section-head"><span class="eyebrow" data-reveal><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+  <path d="M20 2v4" />
+  <path d="M22 4h-4" />
+  <circle cx="4" cy="20" r="2" />
+</svg> The details</span><h2 data-reveal style="--i:1">Small things, done properly</h2></div><div class="bento"><article class="card tilt-card" data-reveal style="--i:0"><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <ellipse cx="12" cy="5" rx="9" ry="3" />
+  <path d="M3 12a9 3 0 0 0 5 2.69" />
+  <path d="M21 9.3V5" />
+  <path d="M3 5v14a9 3 0 0 0 6.47 2.88" />
+  <path d="M12 12v4h4" />
+  <path d="M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16" />
+</svg></div><h3>Encrypted backups</h3><p>Export everything to one file protected by a passphrase you choose. Restore it on any phone.</p></article><article class="card tilt-card" data-reveal style="--i:1"><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 20h.01" />
+  <path d="M8.5 16.429a5 5 0 0 1 7 0" />
+  <path d="M5 12.859a10 10 0 0 1 5.17-2.69" />
+  <path d="M19 12.859a10 10 0 0 0-2.007-1.523" />
+  <path d="M2 8.82a15 15 0 0 1 4.177-2.643" />
+  <path d="M22 8.82a15 15 0 0 0-11.288-3.764" />
+  <path d="m2 2 20 20" />
+</svg></div><h3>Fully offline</h3><p>Every feature works with no connection, because nothing ever needs a server.</p></article><article class="card tilt-card" data-reveal style="--i:2"><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+  <path d="M20 2v4" />
+  <path d="M22 4h-4" />
+  <circle cx="4" cy="20" r="2" />
+</svg></div><h3>Matches your phone</h3><p>Follow your wallpaper colours on Android 12 and newer, or keep the SafeKeep green.</p></article><article class="card tilt-card" data-reveal style="--i:0"><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="7" height="7" x="3" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="14" rx="1" />
+  <rect width="7" height="7" x="3" y="14" rx="1" />
+</svg></div><h3>Home-screen widgets</h3><p>A quick note square, plus a note widget you can tick off without opening the app. Note text shows only while no PIN is set.</p></article><article class="card tilt-card" data-reveal style="--i:1"><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="18" cy="5" r="3" />
+  <circle cx="6" cy="12" r="3" />
+  <circle cx="18" cy="19" r="3" />
+  <line x1="8.59" x2="15.42" y1="13.51" y2="17.49" />
+  <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
+</svg></div><h3>Share when you choose</h3><p>Send a single note as plain text to any app. Nothing is shared unless you do it.</p></article><article class="card tilt-card" data-reveal style="--i:2"><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="5" x="2" y="3" rx="1" />
+  <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+  <path d="M10 12h4" />
+</svg></div><h3>A safety net</h3><p>Deleted notes wait in the trash for seven days, and archiving or deleting can be undone.</p></article></div></div></section><section class="section"><div class="wrap colour-grid"><div class="colour-copy"><span class="eyebrow" data-reveal><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+</svg> Make it yours</span><h2 data-reveal style="--i:1">Twenty colours for <span class="grad">every kind of note</span></h2><p class="lead" data-reveal style="--i:2">Colour-code money, travel, work and home. Tap a colour to try it on the note.</p><div class="swatches" data-reveal style="--i:3" role="group" aria-label="Note colours"><button type="button" class="swatch" style="--c:#FFFFFF;--n:0" data-colour="#FFFFFF" data-name="Default" aria-label="Default" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#FAAFA8;--n:1" data-colour="#FAAFA8" data-name="Coral" aria-label="Coral" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#F39F76;--n:2" data-colour="#F39F76" data-name="Peach" aria-label="Peach" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#FFF8B8;--n:3" data-colour="#FFF8B8" data-name="Sand" aria-label="Sand" aria-pressed="false"></button><button type="button" class="swatch active" style="--c:#E2F6D3;--n:4" data-colour="#E2F6D3" data-name="Mint" aria-label="Mint" aria-pressed="true"></button><button type="button" class="swatch" style="--c:#B4DDD3;--n:5" data-colour="#B4DDD3" data-name="Sage" aria-label="Sage" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#D4E4ED;--n:6" data-colour="#D4E4ED" data-name="Fog" aria-label="Fog" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#AECCDC;--n:7" data-colour="#AECCDC" data-name="Storm" aria-label="Storm" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#D3BFDB;--n:8" data-colour="#D3BFDB" data-name="Dusk" aria-label="Dusk" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#F6E2DD;--n:9" data-colour="#F6E2DD" data-name="Blossom" aria-label="Blossom" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#E9E3D4;--n:10" data-colour="#E9E3D4" data-name="Clay" aria-label="Clay" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#EFEFF1;--n:11" data-colour="#EFEFF1" data-name="Chalk" aria-label="Chalk" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#DCF2B0;--n:12" data-colour="#DCF2B0" data-name="Lime" aria-label="Lime" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#A9E5DE;--n:13" data-colour="#A9E5DE" data-name="Teal" aria-label="Teal" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#C3E3FF;--n:14" data-colour="#C3E3FF" data-name="Sky" aria-label="Sky" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#E2D8FF;--n:15" data-colour="#E2D8FF" data-name="Lavender" aria-label="Lavender" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#FFCADF;--n:16" data-colour="#FFCADF" data-name="Rose" aria-label="Rose" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#FFD9A6;--n:17" data-colour="#FFD9A6" data-name="Mango" aria-label="Mango" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#F2DA7E;--n:18" data-colour="#F2DA7E" data-name="Mustard" aria-label="Mustard" aria-pressed="false"></button><button type="button" class="swatch" style="--c:#D6D8DD;--n:19" data-colour="#D6D8DD" data-name="Graphite" aria-label="Graphite" aria-pressed="false"></button></div></div><div class="demo-note-wrap" data-reveal="zoom"><div class="demo-note" id="demo-note" style="--c:#E2F6D3"><div class="demo-top"><b>Bank and cards</b><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 17v5" />
+  <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z" />
+</svg></div><p>Savings account ending 4821</p><p>Credit card bill due on the 5th</p><p>Netbanking hints live here, not in the cloud</p><div class="demo-chips"><span>Finance</span><span id="demo-colour-name">Mint</span></div></div><div class="demo-note ghost-a" aria-hidden="true"></div><div class="demo-note ghost-b" aria-hidden="true"></div></div></div></section><section class="section vault"><div class="vault-bg" aria-hidden="true"></div><div class="wrap"><div class="section-head"><span class="eyebrow" data-reveal><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg> Security</span><h2 data-reveal style="--i:1">Encrypted before it touches storage</h2><p class="lead" data-reveal style="--i:2">Outside the app, the notes on your phone are noise. This is what the same note looks like without the key.</p></div><div class="vault-grid"><div class="cipher" data-reveal="left" id="cipher"><div class="cipher-head"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="cipher-state" id="cipher-state"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+</svg> <em>Locked</em></span></div><div class="cipher-body"><p data-scramble="Netbanking ID: user.4821">Netbanking ID: user.4821</p><p data-scramble="Card PIN hint: mum's birthday">Card PIN hint: mum's birthday</p><p data-scramble="Tax login: saved, never synced">Tax login: saved, never synced</p></div><div class="cipher-foot"><span class="pin-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span>Only SafeKeep holds the key</span></div></div><div class="pillars"><article class="pillar" data-reveal="right" style="--i:0"><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 9.8V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <path d="M9 17v-2a2 2 0 0 0-4 0v2" />
+  <rect width="8" height="5" x="3" y="17" rx="1" />
+</svg></div><div><h3>Encrypted database</h3><p>Every note lives in an AES-256 encrypted database. There is no plain-text copy.</p></div></article><article class="pillar" data-reveal="right" style="--i:1"><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" />
+  <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" />
+</svg></div><div><h3>Keys stay in the phone</h3><p>The key is kept in Android’s hardware-backed secure storage, and sealed by your PIN if you turn one on.</p></div></article><article class="pillar" data-reveal="right" style="--i:2"><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <line x1="10" x2="14" y1="2" y2="2" />
+  <line x1="12" x2="15" y1="14" y2="11" />
+  <circle cx="12" cy="14" r="8" />
+</svg></div><div><h3>Guessing is slowed down</h3><p>With a PIN on, five wrong tries start a wait that doubles each time, from 30 seconds up to an hour.</p></div></article><article class="pillar" data-reveal="right" style="--i:3"><div class="icon-badge"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 2h13a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-5" />
+  <path d="M10 10 2.5 2.5C2 2 2 2.5 2 5v3a2 2 0 0 0 2 2h6z" />
+  <path d="M22 17v-1a2 2 0 0 0-2-2h-1" />
+  <path d="M4 14a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16.5l1-.5.5.5-8-8H4z" />
+  <path d="M6 18h.01" />
+  <path d="m2 2 20 20" />
+</svg></div><div><h3>Nothing to breach</h3><p>There is no server and no account, so there is no database of users to leak.</p></div></article><a class="btn ghost on-dark" href="/safekeep/security" data-reveal style="--i:4">Read the full security model <svg aria-hidden="true" class="nudge"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg></a></div></div></div></section><section class="section"><div class="wrap compare-grid"><div class="compare-stage" data-reveal="zoom"><div class="phone compare-phone" id="compare" style="--split:50%"><div class="phone-screen"><div class="phone bare"><div class="phone-screen"><img src="/safekeep/_astro/home.CwU2_iED_1n7a46.webp" alt="SafeKeep in light mode" loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar dark" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div><div class="compare-dark"><div class="phone bare"><div class="phone-screen"><img src="/safekeep/_astro/home-dark.Clrk3T3T_23iq7M.webp" alt="SafeKeep in dark mode" loading="lazy" decoding="async" width="640" height="1422"><div class="statusbar light" aria-hidden="true"><span>9:41</span><svg viewBox="0 0 54 14" fill="currentColor"><rect x="0" y="9" width="3" height="5" rx="1"></rect><rect x="5" y="6" width="3" height="8" rx="1"></rect><rect x="10" y="3" width="3" height="11" rx="1"></rect><rect x="15" y="0" width="3" height="14" rx="1"></rect><path d="M30 4.2a7.4 7.4 0 0 1 10.4 0l-1.5 1.6a5.2 5.2 0 0 0-7.4 0zm2.6 2.8a3.7 3.7 0 0 1 5.2 0L35.2 9.8z"></path><rect x="44" y="2" width="9" height="11" rx="2"></rect><rect x="46.5" y="0" width="4" height="2.4" rx="1"></rect></svg></div></div></div></div><div class="compare-handle" aria-hidden="true"><span><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg></span></div></div></div><input id="compare-range" class="compare-range" type="range" min="0" max="100" value="50" aria-label="Slide between light and dark mode"></div><div class="compare-copy"><span class="eyebrow" data-reveal><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg> Light and dark</span><h2 data-reveal style="--i:1">Easy on the eyes, <span class="grad">day or night</span></h2><p class="lead" data-reveal style="--i:2">SafeKeep follows your phone’s theme, or you can pick one. Every note colour has its own dark version, so notes stay readable at midnight.</p><p class="hint" data-reveal style="--i:3"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="9" cy="12" r="1" />
+  <circle cx="9" cy="5" r="1" />
+  <circle cx="9" cy="19" r="1" />
+  <circle cx="15" cy="12" r="1" />
+  <circle cx="15" cy="5" r="1" />
+  <circle cx="15" cy="19" r="1" />
+</svg> Drag the slider on the phone</p></div></div></section><section class="section alt stats-section"><div class="wrap stats"><div class="stat" data-reveal style="--i:0"><strong><span data-count="0">0</span></strong><span>accounts to create</span></div><div class="stat" data-reveal style="--i:1"><strong><span data-count="0">0</span></strong><span>servers holding your notes</span></div><div class="stat" data-reveal style="--i:2"><strong><span data-count="0">0</span></strong><span>trackers or ads</span></div><div class="stat" data-reveal style="--i:3"><strong><span data-count="256">256</span>-bit</strong><span>encryption on every note</span></div></div></section><section class="section cta-section"><div class="wrap"><div class="cta" data-reveal="zoom"><div class="cta-shine" aria-hidden="true"></div><div class="cta-orbs" aria-hidden="true"><i></i><i></i><i></i></div><h2>Take your notes back.</h2><p>Install SafeKeep, start writing, and add a PIN whenever you want one.</p><div class="hero-cta"><a class="btn light" href="/safekeep/download"><svg aria-hidden="true"
+ 
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 15V3" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+  <path d="m7 10 5 5 5-5" />
+</svg> Download for Android</a><a class="btn outline-light" href="/safekeep/faq">Questions? Read the FAQ</a></div></div></div></section><script type="module">var e=window.matchMedia(`(prefers-reduced-motion: reduce)`).matches,t=window.matchMedia(`(pointer: fine)`).matches,n=document.getElementById(`hero-stage`);if(n&&t&&!e){let e=n.querySelectorAll(`[data-depth]`),t=0;window.addEventListener(`pointermove`,r=>{cancelAnimationFrame(t),t=requestAnimationFrame(()=>{let t=n.getBoundingClientRect(),i=(r.clientX-(t.left+t.width/2))/window.innerWidth,a=(r.clientY-(t.top+t.height/2))/window.innerHeight;n.style.setProperty(`--rx`,`${(-a*10).toFixed(2)}deg`),n.style.setProperty(`--ry`,`${(i*14).toFixed(2)}deg`),e.forEach(e=>{let t=Number(e.dataset.depth);e.style.setProperty(`--px`,`${(i*t).toFixed(1)}px`),e.style.setProperty(`--py`,`${(a*t).toFixed(1)}px`)})})})}var r=document.querySelectorAll(`.step`),i=document.querySelectorAll(`.stage-shot`),a=document.querySelectorAll(`.stage-dots i`),o=e=>{r.forEach((t,n)=>t.classList.toggle(`active`,n===e)),i.forEach((t,n)=>t.classList.toggle(`active`,n===e)),a.forEach((t,n)=>t.classList.toggle(`active`,n===e))},s=new IntersectionObserver(e=>{for(let t of e)t.isIntersecting&&o(Number(t.target.dataset.step))},{rootMargin:`-45% 0px -45% 0px`});r.forEach(e=>s.observe(e)),o(0),t&&!e&&document.querySelectorAll(`.tilt-card`).forEach(e=>{e.addEventListener(`pointermove`,t=>{let n=e.getBoundingClientRect(),r=(t.clientX-n.left)/n.width,i=(t.clientY-n.top)/n.height;e.style.setProperty(`--mx`,`${r*100}%`),e.style.setProperty(`--my`,`${i*100}%`),e.style.setProperty(`--tx`,`${(i-.5)*-7}deg`),e.style.setProperty(`--ty`,`${(r-.5)*9}deg`)}),e.addEventListener(`pointerleave`,()=>{e.style.setProperty(`--tx`,`0deg`),e.style.setProperty(`--ty`,`0deg`)})});var c=document.getElementById(`demo-note`),l=document.getElementById(`demo-colour-name`),u=document.querySelectorAll(`.swatch`);u.forEach(e=>{e.addEventListener(`click`,()=>{u.forEach(t=>{t.classList.toggle(`active`,t===e),t.setAttribute(`aria-pressed`,String(t===e))}),c?.style.setProperty(`--c`,e.dataset.colour??`#fff`),l&&(l.textContent=e.dataset.name??``),c?.classList.remove(`pop`),c?.offsetWidth,c?.classList.add(`pop`)})});var d=document.getElementById(`cipher`),f=document.querySelector(`#cipher-state em`),p=d?Array.from(d.querySelectorAll(`[data-scramble]`)):[],m=`ABCDEF0123456789abcdef#$%&*+=/`,h=e=>Array.from({length:e},()=>m[Math.floor(Math.random()*30)]).join(``),g=(e,t,n)=>{let r=e.dataset.scramble??``,i=0,a=()=>{i++;let o=Math.floor(i/22*r.length);e.textContent=t?r.slice(0,o)+h(r.length-o):h(o)+r.slice(o),i<22?setTimeout(a,34):(e.textContent=t?r:h(r.length),n?.())};a()},_,v=e=>{d&&(d.classList.toggle(`unlocked`,e),f&&(f.textContent=e?`Unlocked`:`Locked`),p.forEach((t,n)=>setTimeout(()=>g(t,e),n*160)),_=setTimeout(()=>v(!e),e?3600:2600))};d&&(e?d.classList.add(`unlocked`):(p.forEach(e=>e.textContent=h((e.dataset.scramble??``).length)),new IntersectionObserver((e,t)=>{e[0].isIntersecting&&(t.disconnect(),_=setTimeout(()=>v(!0),900))},{threshold:.4}).observe(d))),window.addEventListener(`pagehide`,()=>clearTimeout(_));var y=document.getElementById(`compare`),b=document.getElementById(`compare-range`),x=e=>y?.style.setProperty(`--split`,`${e}%`);b?.addEventListener(`input`,()=>x(Number(b.value))),y&&b&&!e&&new IntersectionObserver((e,t)=>{if(!e[0].isIntersecting)return;t.disconnect();let n=performance.now(),r=e=>{let t=Math.min(1,(e-n)/2200),i=50+Math.sin(t*Math.PI*2)*32;b.value=String(i),x(i),t<1&&requestAnimationFrame(r)};requestAnimationFrame(r)},{threshold:.5}).observe(y);var S=document.querySelectorAll(`[data-count]`),C=new IntersectionObserver(t=>{for(let n of t){if(!n.isIntersecting)continue;C.unobserve(n.target);let t=n.target,r=Number(t.dataset.count);if(e||r===0){t.classList.add(`landed`);continue}let i=performance.now(),a=e=>{let n=Math.min(1,(e-i)/1400);t.textContent=String(Math.round(r*(1-(1-n)**3))),n<1&&requestAnimationFrame(a)};requestAnimationFrame(a)}},{threshold:.6});S.forEach(e=>C.observe(e));</script></main><footer class="site-footer"><div class="wrap foot"><div class="foot-brand"><a class="brand" href="/safekeep/"><span class="brand-logo"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect x="4" y="4" width="112" height="112" rx="34" fill="#00B386"/><g transform="translate(60 60) scale(1) translate(-61 -60)">
+  <circle cx="36" cy="44" r="6.5" fill="#FFFFFF"/><circle cx="36" cy="58" r="6.5" fill="#FFFFFF"/><circle cx="36" cy="72" r="6.5" fill="#FFFFFF"/>
+  <path d="M44 28 H78 a8 8 0 0 1 8 8 V70 L64 92 H44 a8 8 0 0 1 -8 -8 V36 a8 8 0 0 1 8 -8 Z" fill="#FFFFFF"/>
+  <path d="M86 70 L64 92 C64 84 66 78 71 75 C75 72 80 70 86 70 Z" fill="#00805F"/>
+  <path d="M86 70 L64 92" stroke="#006B50" stroke-width="1.2"/>
+  <circle cx="61" cy="55" r="6" fill="#00B386"/>
+  <path d="M57.6 58.5 H64.4 L66.5 72 H55.5 Z" fill="#00B386"/></g></svg></span><span>SafeKeep</span></a><p>Private notes, encrypted on your phone. No account, no cloud, no tracking.</p></div><div class="foot-links"><div><h4>App</h4><a href="/safekeep/#features">Features</a><a href="/safekeep/download">Download</a><a href="/safekeep/faq">FAQ</a></div><div><h4>Trust</h4><a href="/safekeep/security">Security</a><a href="/safekeep/privacy">Privacy</a><a href="/safekeep/download#verify">Verify your download</a></div></div></div><div class="wrap legal"><span>© 2026 SafeKeep. This website uses no cookies, no analytics and no third-party scripts.</span></div></footer><script type="module">var e=document.documentElement;document.getElementById(`theme-toggle`)?.addEventListener(`click`,()=>{let t=e.dataset.theme===`dark`||!e.dataset.theme&&window.matchMedia(`(prefers-color-scheme: dark)`).matches;e.dataset.theme=t?`light`:`dark`;try{localStorage.setItem(`theme`,e.dataset.theme)}catch{}});var t=document.getElementById(`menu-toggle`),n=document.getElementById(`nav`),r=e=>{document.body.classList.toggle(`menu-open`,e),t?.setAttribute(`aria-expanded`,String(e))};t?.addEventListener(`click`,()=>r(!document.body.classList.contains(`menu-open`))),n?.addEventListener(`click`,e=>{e.target.closest(`a`)&&r(!1)});var i=document.querySelector(`.site-header`),a=document.querySelector(`.progress`),o=!1,s=()=>{o||(o=!0,requestAnimationFrame(()=>{let e=window.scrollY;i?.classList.toggle(`scrolled`,e>12);let t=document.documentElement.scrollHeight-window.innerHeight;a&&(a.style.transform=`scaleX(${t>0?Math.min(1,e/t):0})`),o=!1}))};window.addEventListener(`scroll`,s,{passive:!0}),s();var c=new IntersectionObserver(e=>{for(let t of e)t.isIntersecting&&(t.target.classList.add(`in`),c.unobserve(t.target))},{threshold:.14,rootMargin:`0px 0px -6% 0px`});document.querySelectorAll(`[data-reveal]`).forEach(e=>c.observe(e));</script></body></html>
